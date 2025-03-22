@@ -1,0 +1,186 @@
+Setting environment for using XAMPP for Windows.
+2022asp85@CL2-47 c:\xampp
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 16
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| bfl                |
+| book               |
+| bookboat           |
+| company            |
+| englishfi          |
+| hospital           |
+| ica02              |
+| ica2company        |
+| icae02             |
+| information_schema |
+| inventory          |
+| it1123db           |
+| it1223db           |
+| librarysystem      |
+| moviedb            |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| retailstore        |
+| spjbase            |
+| student            |
+| studentdb          |
+| students           |
+| students1          |
+| test               |
+| university         |
++--------------------+
+27 rows in set (0.071 sec)
+
+MariaDB [(none)]> create databse UOV;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'databse UOV' at line 1
+MariaDB [(none)]> create database UOV;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| bfl                |
+| book               |
+| bookboat           |
+| company            |
+| englishfi          |
+| hospital           |
+| ica02              |
+| ica2company        |
+| icae02             |
+| information_schema |
+| inventory          |
+| it1123db           |
+| it1223db           |
+| librarysystem      |
+| moviedb            |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| retailstore        |
+| spjbase            |
+| student            |
+| studentdb          |
+| students           |
+| students1          |
+| test               |
+| university         |
+| uov                |
++--------------------+
+28 rows in set (0.002 sec)
+MariaDB [(none)]> use UOV;
+Database changed
+MariaDB [UOV]> create table student(std_id var(15),name varchar(30),Dob date,city varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(15),name varchar(30),Dob date,city varchar(20))' at line 1
+MariaDB [UOV]> create table student(std_id VARCHAR(15),name VARCHAR(30),Dob DATE,city VARCHAR(20));
+Query OK, 0 rows affected (0.081 sec)
+
+MariaDB [UOV]> DESC students;
+ERROR 1146 (42S02): Table 'uov.students' doesn't exist
+MariaDB [UOV]> DESC student;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| std_id | varchar(15) | YES  |     | NULL    |       |
+| name   | varchar(30) | YES  |     | NULL    |       |
+| Dob    | date        | YES  |     | NULL    |       |
+| city   | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.014 sec)
+MariaDB [UOV]> INSERT INTO student VALUES('2022/ASP/85','Danshi','2022-02-05','Kilinochchi');
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [UOV]> select *from student;
++-------------+--------+------------+-------------+
+| std_id      | name   | Dob        | city        |
++-------------+--------+------------+-------------+
+| 2022/ASP/85 | Danshi | 2022-02-05 | Kilinochchi |
++-------------+--------+------------+-------------+
+1 row in set (0.000 sec)
+
+MariaDB [UOV]> INSERT INTO student VALUES('2022/ASP/84','Kaththarin','2022-09-12','Vavuniya');
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [UOV]> INSERT INTO student VALUES('2022/ASP/75','stella','2022-04-12','colombo');
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [UOV]> INSERT INTO student VALUES('2022/ASP/81','Piruththinka','2022-05-22','batti');
+Query OK, 1 row affected (0.006 sec)
+
+MariaDB [UOV]> INSERT INTO student VALUES('2022/ASP/83','Minosh','2022-01-12','batti');
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [UOV]> select *from student;
++-------------+--------------+------------+-------------+
+| std_id      | name         | Dob        | city        |
++-------------+--------------+------------+-------------+
+| 2022/ASP/85 | Danshi       | 2022-02-05 | Kilinochchi |
+| 2022/ASP/84 | Kaththarin   | 2022-09-12 | Vavuniya    |
+| 2022/ASP/75 | stella       | 2022-04-12 | colombo     |
+| 2022/ASP/81 | Piruththinka | 2022-05-22 | batti       |
+| 2022/ASP/83 | Minosh       | 2022-01-12 | batti       |
++-------------+--------------+------------+-------------+
+5 rows in set (0.000 sec)
+
+MariaDB [UOV]> DESC Employee_Details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Physician_Id | varchar(10) | YES  |     | NULL    |       |
+| name         | varchar(30) | YES  |     | NULL    |       |
+| position     | varchar(50) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.011 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('1','John Dorian','Staff Internist');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('2','Elliot Reid','Attending Physician');
+Query OK, 1 row affected (0.005 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('3','Christopher Turk','Surgical Attending Physician');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('4','Percival Cox','Senior Attending Physician');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('5','Keith Dudemeister','MD Resident');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [UOV]> INSERT INTO Employee_Details VALUES('6','Molly Clock','Attending Psychiatrist');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [UOV]> select * from Employee_Details;
++--------------+-------------------+------------------------------+
+| Physician_Id | name              | position                     |
++--------------+-------------------+------------------------------+
+| 1            | John Dorian       | Staff Internist              |
+| 2            | Elliot Reid       | Attending Physician          |
+| 3            | Christopher Turk  | Surgical Attending Physician |
+| 4            | Percival Cox      | Senior Attending Physician   |
+| 5            | Keith Dudemeister | MD Resident                  |
+| 6            | Molly Clock       | Attending Psychiatrist       |
++--------------+-------------------+------------------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [UOV]>
+
+conclusion
+how to create a database
+howb to craete tables
+how to insert values
