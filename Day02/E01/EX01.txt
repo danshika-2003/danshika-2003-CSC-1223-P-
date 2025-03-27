@@ -137,3 +137,5 @@ MariaDB [UOV]>  select *from CS1;
 +--------+--------------+------+-------+-------------+
 5 rows in set (0.001 sec)
 
+Conclusion: We study how to Create the Database,table and  Insert Data into the Table,View the Data. 
+and, specially today we studied put the details in notepad++.
