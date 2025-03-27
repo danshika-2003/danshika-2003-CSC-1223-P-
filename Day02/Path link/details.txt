@@ -1,0 +1,5 @@
+"1",Danshika,22,B,"Kilinochchi"
+"2",Caththarin,22,A,"Vavuniya"
+"3",Stella,22,B,"Colombo"
+"4",Piruththinka,21,A,"Batti"
+"5",Minosh,23,B,"Batti"
