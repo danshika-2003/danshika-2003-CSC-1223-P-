@@ -1,2 +1,2 @@
-LOAD DATA LOCAL INFILE 'C:/Users/siva1/Desktop/csc1223/Day02/Path link/Day 02.csv' INTO TABLE CSC FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED
+LOAD DATA LOCAL INFILE 'C:/Users/siva1/Desktop/csc1223/Day02/Path link/D2.csv' INTO TABLE CSC FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED
  BY '\r\n' (std_id,name, age, grade, city);
