@@ -1,2 +1,0 @@
- LOAD DATA LOCAL INFILE 'C:/Users/siva1/Desktop/Work/Day 02.csv' INTO TABLE CS1 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED
- BY '\r\n' (std_id,name, age, grade, city);
