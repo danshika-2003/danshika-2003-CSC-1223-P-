@@ -359,3 +359,9 @@ MariaDB [uov]> select* from customer;
 4 rows in set (0.001 sec)
 
 MariaDB [uov]>
+
+Conclusion-Learnt how to write SQL Queries to get different details from tables.
+           Learnt to find unique details from table.
+           Learnt to use >,<,!=,= symbols to get details.
+           Learnt to change details in tables.
+           Learnt to delete details from tables.
